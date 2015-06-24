@@ -1,6 +1,10 @@
 from src.server import WebhookServer
 from blinker import signal
 
+# Signal can be any of the Events specified here:
+# https://developer.github.com/webhooks/#events
+# Usage: sig = signal(<event>)
+
 pr_signal = signal('pull_request')
 issues_signal = signal('issues')
 push_signal = signal('push')
